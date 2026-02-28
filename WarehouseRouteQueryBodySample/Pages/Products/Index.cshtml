@@ -1,0 +1,26 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<h2>Detail product</h2>
+
+<p><b>RoutValues["id"]:</b>@Request.RouteValues["id"]</p>
+<p><b>Query["mode"]:</b>@Request.RouteValues["mode"]</p>
+<p><b>Query["showReviews"]:</b>@Request.RouteValues["showReviews"]</p>
+<p><b>QueryString:</b>@Request.QueryString</p>
+
+<ul>
+    @foreach (var product in Model.Products)
+    {
+        <li>
+            @product.Name (@product.Price грн)
+            <a asp-page="Details" asp-route-id="@product.Id">Деталi (тiльки Route)</a>
+            <a asp-page="Details" asp-route-mode="full" asp-route-showReviews="true">
+                Деталi (Route + Query)
+            </a>
+        </li>
+    }
+</ul>

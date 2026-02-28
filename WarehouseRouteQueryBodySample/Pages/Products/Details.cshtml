@@ -1,0 +1,48 @@
+@page "{id:int?}"
+@model Details
+
+@{
+    Layout = null;
+}
+
+<h2>Деталi товару</h2>
+
+<p><b>RootValues["id]</b>@Request.RouteValues["id"]</p>
+
+@if (Model.Product != null)
+{
+    <div>
+        <h3>@Model.Product.Name</h3>
+        <p>Ціна: @Model.Product.Price грн.</p>
+        @* <p>Опис: @Model.Product.Description</p> *@
+
+        @* @if (Model.ShowReviews) *@
+        @* { *@
+        @*     <h4>Відгуки:</h4> *@
+        @*     <ul> *@
+        @*         @foreach (var review in Model.Product.Reviews) *@
+        @*         { *@
+        @*             <li>@review</li> *@
+        @*         } *@
+        @*     </ul> *@
+        @* } *@
+    </div>
+}
+else
+{
+    <p>Товар не знайдено.</p>
+}
+
+<hr/>
+<h2>Write a review</h2>
+<form method="post">
+    <input type="hidden" name="productId" value="@Request.RouteValues["id"]"/>
+    <input type="text" name="reviewText" placeholder="Your review"/>
+    <button type="submit">Send</button>
+</form>
+
+@if (Model.BodyContent != null)
+{
+    <p><b>Request Body:</b>@Model.BodyContent</p>
+    
+}
