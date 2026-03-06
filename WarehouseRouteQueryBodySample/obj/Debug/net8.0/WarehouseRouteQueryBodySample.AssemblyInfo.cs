@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WarehouseRouteQueryBodySample")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+192e4000ad4526f3bcf30143bd2545c21ca8a4ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("WarehouseRouteQueryBodySample")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WarehouseRouteQueryBodySample")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

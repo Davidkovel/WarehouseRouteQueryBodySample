@@ -1,0 +1,27 @@
+@page
+@model WarehouseRouteQueryBodySample.Pages.Suppliers.Details
+
+@{
+    Layout = null;
+}
+
+<h2>Details</h2>
+
+<p><b>Id=</b>@Model.Id</p>
+<p><b>Mode=</b>@Model.Mode</p>
+
+<hr/>
+
+<h2>Add</h2>
+
+
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id"/>
+    <input type="text" name="noteText" placeholder="Примiтка"/>
+    <button type="submit">Save</button>
+</form>
+
+@if (Model.PostResult != null)
+{
+    <p><b>Resultat POST=</b>@Model.PostResult</p>
+}

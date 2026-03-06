@@ -1,0 +1,17 @@
+@page
+@model WarehouseRouteQueryBodySample.Pages.Suppliers.Index
+
+@{
+    Layout = null;
+}
+
+<ul>
+    @foreach (var supplier in Model.Suppliers)
+    {
+        <li>
+            @supplier.Name
+            <a asp-page="Details" asp-route-id="@supplier.Id">Details</a>
+            <a asp-page="Details" asp-route-id="@supplier.Id" asp-route-mode="full">Full Details</a>
+        </li>
+    }
+</ul>
